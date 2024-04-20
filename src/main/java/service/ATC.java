@@ -41,14 +41,14 @@ public class ATC {
     }
 
 
-    public String requestFromFlight(String flightNo, String callSign, PlaneType planeType, FlightRequest.RequestType requestType) {
+    public void requestFromFlight(String flightNo, String callSign, PlaneType planeType, FlightRequest.RequestType requestType) {
 
         Plane p = new Plane(flightNo, callSign, planeType);
         FlightRequest fr = new FlightRequest(p, requestType, new Timestamp(System.currentTimeMillis()));
 
         runwayQueue.addRequest(fr);
 
-        return "Request Accepted, wait for response, Roger Flight "+ flightNo;
+        System.out.println("Request Accepted, wait for response, Roger Flight "+ flightNo + " at time: "+ new Timestamp(System.currentTimeMillis()).toString());
 
     }
 
