@@ -1,7 +1,7 @@
-#Low Level Design of an Air Traffic Controller
+# Low Level Design of an Air Traffic Controller
 
 
-##Requirements 
+## Requirements 
 
 1. There is a Air Traffic Controller at an airport that is responsible for giving the go ahead to the planes to take off/land.
 2. It also allocates the fixed no. of runways at the airport to the planes it clears for take off/landing.
@@ -11,7 +11,7 @@
 
 
 
-##Design
+## Design
 
 We expose a single API from the ATC perspective which is requestFromFlight(). This takes in the flightNo, the callsign, plane type ( A320, A380 ...) and the requestType( LAND/TAKEOFF)
 
